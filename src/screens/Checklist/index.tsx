@@ -8,6 +8,7 @@ import { FormProps } from './props';
 import SectionDivider from "../../components/SectionDivider";
 import FormItemNote from "../../components/FormItemNote";
 import { CheckListActions } from "./action";
+import SendFormButton from "../../components/SendFormButton";
 
 export default function CheckList(){
     const options: string[] = ["Sim",  "Não", "N.A"];
@@ -941,7 +942,7 @@ export default function CheckList(){
         <ScrollView style={styles.container}>
             {generalInfo()}
             {vehicleInfo()}
-            <Button title="enviar dados" onPress={handleSubmit(CheckListActions.submitForm)}></Button>
+            <SendFormButton action={handleSubmit(CheckListActions.submitForm)}/>
         </ScrollView>
     )
 }
