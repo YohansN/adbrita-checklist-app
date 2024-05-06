@@ -18,4 +18,20 @@ export const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: 'center',
     },
+    previousSectionButton:{
+        width: "85%",
+        alignItems: "flex-start",
+        marginBottom: 10,
+    },
+    nextSectionButton:{
+        width: "85%",
+        alignItems: "flex-end",
+        marginBottom: 10,
+    },
+    sectionButtonsContainer:{
+        width: "85%",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        marginBottom: 10,
+    }
 })
