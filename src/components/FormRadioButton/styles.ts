@@ -2,12 +2,17 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     container:{
-        marginVertical: 10
+        marginVertical: 10,
+        alignItems: "center",
+        width: "75%"
     },
     itemLabel:{
+        flexWrap: "wrap",
+        maxWidth: "100%",
+        alignSelf: "flex-start",
         textTransform: "uppercase", 
         fontSize: 16,
-        marginBottom: 8
+        marginBottom: 8,
     },
     optionsWrapper:{
         flexDirection: 'row',
