@@ -4,8 +4,8 @@ export interface FormProps{
     inspetor: string;
     quilometragem: number;
     veiculo: string;
-    //data: string; //Modificar
-    //hora: string; //Modificar
+    data: string;
+    hora: string;
     motorista: string;
 
     faroisDianteiros: string;
