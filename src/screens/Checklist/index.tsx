@@ -35,7 +35,8 @@ export default function CheckList(){
 
     const generalInfo = () => (
         <View style={styles.textInfo}>
-                <Text>Checklist ADBRITA</Text>
+                <Text style={styles.title}>Checklist ADBRITA</Text>
+                <Text style={styles.subtitle}>VISTORIA VEICULAR</Text>
                 
                 <Controller 
                     control={control}

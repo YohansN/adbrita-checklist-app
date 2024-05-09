@@ -4,6 +4,17 @@ export const styles = StyleSheet.create({
     container:{
         flex: 1,
     },
+    title:{
+        fontSize: 24,
+        color: "#fff",
+        marginTop: 20,
+        fontWeight: "bold"
+    },
+    subtitle:{
+        marginBottom: 20,
+        color: "#fff",
+        fontWeight: "300"
+    },
     textInfo:{
         flex: 2,
         justifyContent: "center",
