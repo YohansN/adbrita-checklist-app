@@ -24,7 +24,7 @@ enum FormSection {
 export default function CheckList(){
     const options: string[] = ["Sim",  "Não", "N.A"];
     const [currentlySection, setCurrentlySection] = useState<FormSection>(FormSection.SistemaEletrico);
-    const { control, handleSubmit } = useForm<FormProps>();
+    const { control, handleSubmit, formState:{ errors } } = useForm<FormProps>();
     const [answers, setAnswers] = useState({ //Deus me perdoe por isso
         q1: -1, q2: -1, q3: -1, q4: -1, q5: -1, q6: -1, q7: -1, q8: -1, q9: -1,
         q10: -1, q11: -1, q12: -1, q13: -1, q14: -1, q15: -1, q16: -1, q17: -1,
@@ -41,6 +41,7 @@ export default function CheckList(){
                 <Controller 
                     control={control}
                     name="empresa"
+                    rules={{ required: "* Campo EMPRESA requerido" }}
                     render={({ field: {onChange} }) => (
                         <FormTextInput 
                             textLabel="empresa:"
@@ -49,10 +50,12 @@ export default function CheckList(){
                         />
                     )}
                 />
+                <Text style={styles.errorMessage}>{errors.empresa?.message}</Text>
                 
                 <Controller 
                     control={control}
                     name="fabricante"
+                    rules={{ required: "* Campo FABRICANTE requerido" }}
                     render={({ field: {onChange} }) => (
                         <FormTextInput 
                             textLabel="fabricante/modelo:"
@@ -61,10 +64,12 @@ export default function CheckList(){
                         />
                     )}
                 />
+                <Text style={styles.errorMessage}>{errors.fabricante?.message}</Text>
 
                 <Controller 
                     control={control}
                     name="inspetor"
+                    rules={{ required: "* Campo INSPETOR requerido" }}
                     render={({ field: {onChange} }) => (
                         <FormTextInput 
                             textLabel="inspecionado por:"
@@ -73,10 +78,12 @@ export default function CheckList(){
                         />
                     )}
                 />
+                <Text style={styles.errorMessage}>{errors.inspetor?.message}</Text>
 
                 <Controller 
                     control={control}
                     name="quilometragem"
+                    rules={{ required: "* Campo QUILOMETRAGEM requerido" }}
                     render={({ field: {onChange} }) => (
                         <FormTextInput 
                             textLabel="km:"
@@ -85,10 +92,12 @@ export default function CheckList(){
                         />
                     )}
                 />
+                <Text style={styles.errorMessage}>{errors.quilometragem?.message}</Text>
 
                 <Controller 
                     control={control}
                     name="veiculo"
+                    rules={{ required: "* Campo VEÍCULO requerido" }}
                     render={({ field: {onChange} }) => (
                         <FormTextInput 
                             textLabel="veículo:"
@@ -97,10 +106,12 @@ export default function CheckList(){
                         />
                     )}
                 />
+                <Text style={styles.errorMessage}>{errors.veiculo?.message}</Text>
 
                 <Controller 
                     control={control}
                     name="motorista"
+                    rules={{ required: "* Campo MOTORISTA requerido" }}
                     render={({ field: {onChange} }) => (
                         <FormTextInput 
                             textLabel="Motorista:"
@@ -109,6 +120,7 @@ export default function CheckList(){
                         />
                     )}
                 />
+                <Text style={styles.errorMessage}>{errors.motorista?.message}</Text>
 
             </View>
     )
@@ -1009,7 +1021,7 @@ export default function CheckList(){
                         <FormItemNote onChangeText={(note) => onChange(note)} defaultValue={value}/>
                     )}
                 />
-
+                
                 <View style={styles.previousSectionButton}>
                     <FormPreviousSectionButton 
                         previousSection={FormSection.ItensDeEstrutura} 

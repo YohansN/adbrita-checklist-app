@@ -24,6 +24,9 @@ export const styles = StyleSheet.create({
         borderBottomRightRadius: 8,
         paddingVertical: 50
     },
+    errorMessage:{
+        color:"red",
+    },
     radioInfo:{
         flex: 1,
         justifyContent: "center",
