@@ -8,11 +8,13 @@ Em cada item existe um Radio Button para marcar a presença ou ausência daquele
 Ao final do preenchimento é possível gerar um documento PDF compatilhável que contém todas as informações preenchidas e outras a mais (como data e hora).
 
 ## Imagens das telas:
-![Home Screen](./assets/readme-images/home.png)
-![Home Screen preenchida](./assets/readme-images/home2.png)
-![Home Screen error messages](./assets/readme-images/home3.png)
-![Form Section](./assets/readme-images/section1.png)
-![Form Section](./assets/readme-images/section2.png)
-![Form Section](./assets/readme-images/section3.png)
-![Documento PDF gerado](./assets/readme-images/pdf1.png)
-![Documento PDF gerado](./assets/readme-images/pdf2.png)
+<div>
+  <img src="./assets/readme-images/home.png" alt="Home Screen" width="200" />
+  <img src="./assets/readme-images/home2.png" alt="Home Screen" width="200" />
+  <img src="./assets/readme-images/home3.png" alt="Home Screen" width="200" />
+  <img src="./assets/readme-images/section1.png" alt="Sessão formulário" width="200" />
+  <img src="./assets/readme-images/section2.png" alt="Sessão formulário" width="200" />
+  <img src="./assets/readme-images/section3.png" alt="Sessão formulário" width="200" />
+  <img src="./assets/readme-images/pdf1.png" alt="Documento PDF gerado" width="200" />
+  <img src="./assets/readme-images/pdf2.png" alt="Documento PDF gerado" width="200" />
+</div>
